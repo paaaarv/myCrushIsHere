@@ -55,7 +55,80 @@ table {
 
 /* ROOT VARIABLES */ 
 
+:root{
+	--pink: #E8A3AC;
+	--white: #FFFFFF; 
+	--black: #000000; 
+	--light-pink: #FEF3F5; 
+}
 
 /* GLOBAL STYLES */ 
+body{
+	width: 1280px;
+	margin: auto; 
+	background-color: var(--light-pink); 
+	color: var(--black); 
+	font-family: "Roboto", sans-serif; 
+}
+h2{
+	font-family: "Delius", sans-serif;
+	font-size: 24px;
+	color: var(--pink); 
+}
+
+p{
+	font-size: 16px; 
+	margin: 10px;
+	padding: 5px;
+}
+header{
+	background-color: var(--pink); 
+	display: flex; 
+	margin-bottom: 50px;
+}
+nav{
+	width: 50%; 
+	margin-left: 10px;
+}
+nav ul{
+	padding: 30px;
+	align-content: center;
+	display: flex; 
+	justify-content: space-between; 
+}
+nav a, footer a{
+	text-decoration: none; 
+	color: var(--white); 
+	font-family: "Delius", sans-serif; 
+}
 
 
+
+section{
+	margin: 20px; 
+}
+
+#about{
+	width: 80%; 
+	margin: auto; 
+}
+
+
+
+#faq h3{
+	font-weight: bold; 
+	font-size: 18px; 
+	padding: 5px; 
+	margin: 10px;
+}
+
+#faq strong{ 
+	color: var(--pink); 
+	font-weight: bold;
+}
+
+footer{
+	display: flex; 
+	padding: 30px; 
+	background-color: var(--pink); 
+}
