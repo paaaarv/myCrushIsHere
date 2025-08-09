@@ -19,7 +19,7 @@
             </ul>
         </nav>
         <div id="cart">
-            <p> CART </p> 
+            <img src="./images/shopping-cart.svg" style="width:32px; height:32px" alt="shopping cart">
         </div> 
     </header>
     <main>
@@ -37,8 +37,14 @@
         </section>
         <section id="contact">
             <h2> Contact </h2>
-                <form>
-
+                <form id="contact-form">
+                    <label for="name"> Name: </label>
+                    <input type="text" name="name" id="name"></input>
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email"></input>
+                    <label for="message">Message: </label>
+                    <textarea rows="8" id="message"></textarea>
+                    <button type="submit" id="contact-button">Submit</button> 
                 </form>  
         </section>
         <section id="faq">
@@ -67,8 +73,8 @@
             <li><a href="#contact">Contact</a></li>
             <li><a href="#faq">FAQ</a></li>
         </ul> 
-        <p> Sara Wakefield © 2025 </p>
         <img style="width:100px; height:100px"src="./images/instagram-brands-solid-full.svg" alt="instagram icon"> 
+        <p> Website created by Parvathi Kumar © 2025 </p>
 
     </footer>
 </body> 
