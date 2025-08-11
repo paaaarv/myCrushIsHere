@@ -119,14 +119,13 @@ section{
 }
 
 #contact{
-	width: 80%;
 	background-color: var(--white); 
     text-align: center;
     padding: 20px;
 }
 #contact-form{
 	margin: auto; 
-    width:80%; 
+    width:60%; 
 	padding: 20px;
 	display: flex; 
 	flex-wrap: wrap; 
