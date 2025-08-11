@@ -1,0 +1,43 @@
+[
+    {
+        "id": 1, 
+        "name": "Pear Greeting Card", 
+        "price": 6.00, 
+        "image": "./images/perfect_pear.jpeg"
+    },
+     {
+        "id": 2, 
+        "name": "Prickly Cactus Greeting Card", 
+        "price":6.00 , 
+        "image": "./images/prickly_card.jpeg"
+
+    },
+     {
+        "id": 3, 
+        "name": "Flower Coaster", 
+        "price":8.00 , 
+        "image": "./images/coaster.jpeg"
+
+    },
+     {
+        "id": 4, 
+        "name": "Crochet Heart Keychain", 
+        "price":"18.00" , 
+        "image": "./images/heart_keychain.jpeg"
+
+    },
+     {
+        "id": 5, 
+        "name": "New York Crush Tote", 
+        "price":"24.00" , 
+        "image": "./images/new_york_tote.jpeg"
+
+    },
+     {
+        "id": 6, 
+        "name": "Brooklyn Crush Tote", 
+        "price":"24.00" , 
+        "image": "./images/brooklyn_tote.jpg"
+
+    }
+] 
