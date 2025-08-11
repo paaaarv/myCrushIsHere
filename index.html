@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+     <link rel="stylesheet" href="./styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="./index.js"> </script> 
     <title> My Crush is Here </title> 
 </head>
@@ -10,6 +13,14 @@
     <header>
         <div id="logo">
             <img src="./images/Logo_Plain_Red.png" alt="My Crush Is Here Logo">
+        </div>
+        <div id="dialog" title="My Crush Is Here">
+            <form> 
+                <label for="name">What's your name?</label> 
+                <input type="text" id="userName">
+                <label for="crush">Where's your crush?</label> 
+                <input type="text" id="place"> 
+            </form> 
         </div>
         <nav>
             <ul>
@@ -24,6 +35,10 @@
         </div> 
     </header>
     <main>
+        <div id="main-img"> 
+            <img src="./images/main_img.jpeg" alt="red,pink, and white crocheted heart coasters overlapping eachother and a disco ball at the top right"> 
+            <h1> My Crush Is Here </h1> 
+        </div> 
         <section id="about">
             <h2> About </h2> 
             <p> Inspired by the flirty and exhilarating feelings of having a new crush, My Crush Is Here aims to add lighthearted moments to your daily life through accessories and art.
@@ -62,16 +77,19 @@
         </section>
     </main>
     <footer>
-        <h3> My Crush Is Here </h3> 
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#shop">Shop<a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#faq">FAQ</a></li>
-        </ul> 
-        <img style="width:100px; height:100px"src="./images/instagram-brands-solid-full.svg" alt="instagram icon"> 
+        <div class="footer-section">
+            <h3> My Crush Is Here </h3> 
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#shop">Shop<a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul> 
+        </div>
+        <div class="footer-section">
+            <a href="https://www.instagram.com/mycrush.ishere" target="_blank"> <img style="width:50px; height:50px"src="./images/instagram-brands-solid-full.svg" alt="instagram icon"> </a>
+        </div>
         <p> Website created by Parvathi Kumar © 2025 </p>
-
     </footer>
 </body> 
 </html> 

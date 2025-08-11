@@ -60,6 +60,7 @@ table {
 	--white: #FFFFFF; 
 	--black: #000000; 
 	--light-pink: #FEF3F5; 
+    --red: #DA3A51; 
 }
 
 /* GLOBAL STYLES */ 
@@ -68,12 +69,31 @@ body{
 	margin: auto; 
 	background-color: var(--light-pink); 
 	color: var(--black); 
-	font-family: "Roboto", sans-serif; 
+	font-family: "Delius", sans-serif; 
+}
+
+h1{
+    font-size: 2.5em;
+    display: none;
+    position: absolute;
+    top: 300px;
+    z-index: 1000;
+    color: var(--pink);
+    background-color: var(--white);
+    padding: 70px 0;
+    text-align: center;
+    width: 100%; 
 }
 h2{
-	font-family: "Delius", sans-serif;
+	font-family: "Roboto", sans-serif;
 	font-size: 24px;
-	color: var(--pink); 
+	color: var(--red); 
+}
+
+h3{
+    font-size: 20px; 
+    font-weight: bold; 
+    margin-bottom: 10px; 
 }
 
 p{
@@ -82,12 +102,15 @@ p{
 	padding: 5px;
     line-height: 1.5em;
 }
+li{
+    line-height: 1.2em; 
+    margin-bottom: 5px;
+}
 header{
 	background-color: var(--pink); 
 	display: flex; 
     justify-content: space-between;
     padding: 10px;
-	margin-bottom: 50px;
 }
 #logo {
     width: 200px; 
@@ -117,7 +140,67 @@ nav a, footer a{
     align-content: center;
     margin-right: 16px;
 }
+#dialog{
+    display:none;
+    background-color: var(--white); 
+    color: var(--red); 
+    border: 4px solid var(--light-pink); 
+    border-radius: 10px; 
 
+}
+
+/* jQuery UI overriding custom styling for dialog */ 
+
+.ui-dialog {
+  border-radius: 15px;
+  padding: 0;
+  background: var(--white); 
+}
+
+
+.ui-dialog-titlebar {
+  background: transparent;
+  border: none;
+  font-weight: bold;
+  font-size: 1.3em;
+  padding: 12px 20px;
+  text-align: center;
+}
+
+.ui-widget-content{
+    border:none !important; 
+}
+.ui-dialog-buttonset button, #contact-button{
+  background-color: var(--pink); 
+  border: none;
+  color: var(--white); 
+  font-weight: bold;
+  padding: 8px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 10px;
+}
+
+
+button:hover {
+  background-color: var(--red);
+  box-shadow: 0 6px 12px rgba(236, 64, 122, 0.7);
+}
+
+
+.ui-widget-overlay {
+  background: rgba(222, 218, 219, 0.576); 
+}
+
+#main-img{
+    object-fit: cover;
+}
+#main-img img {
+   width: 100%;
+   height: 100vh;
+   margin-bottom: 50px;
+}
 
 section{
 	margin: 20px; 
@@ -143,9 +226,9 @@ section{
 }
 
 label{
-	font-family: "Roboto", sans-serif;
+	font-family: "Delius", sans-serif;
 	margin: 5px;
-	color: var(--pink); 
+	color: var(--red); 
     width: 20%; 
     font-size: 20px; 
     align-self: center;	
@@ -160,13 +243,9 @@ input, textarea{
 
 #contact-button{
     width: 25%; 
-    background-color: var(--white); 
-    border: 4px solid var(--pink); 
-    border-radius: 8px; 
-    padding: 20px;
+    padding: 10px;
     font-size: 16px; 
     font-family: "Delius", sans-serif;
-    color: var(--pink); 
     font-weight: bold;
     margin: 10px 96px 10px auto; 
 }
@@ -185,9 +264,20 @@ input, textarea{
 footer{
 	display: flex; 
 	flex-wrap: wrap; 
-	justify-content: space-between;
-	padding: 30px; 
+    align-items: center;
+	justify-content: space-around;
+	padding: 20px; 
 	background-color: var(--pink); 
 }
 
+.footer-section{
+    display: flex; 
+    flex-direction: column;
+    margin-top: 20px;
+}
 
+footer p{
+    display: block; 
+    width: 100%; 
+    text-align: center;
+}
