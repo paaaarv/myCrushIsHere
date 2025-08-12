@@ -1,3 +1,7 @@
+
+'use strict';
+
+
 $(document).ready(function() {
     //create dialog jquery widget 
     $("#dialog").dialog({
@@ -17,25 +21,29 @@ $(document).ready(function() {
             "xoxo" :  function() {
                 updateHeading(); 
                 $(this).dialog("close");
+                showDialog(); 
                 }
             }
     })
 
-    //check whether local storage has info, otherwise open dialog to get data 
-    if (localStorage.getItem('crushName') && localStorage.getItem('crushPlace')){
-        $("h1").fadeIn(2000); 
-        $("#main-img h1").text(`${localStorage.getItem('crushName')}'s crush is in ${localStorage.getItem("crushPlace")}`); 
-    }
-    else{
-        $("#dialog").dialog("open"); 
-    }
-
-    
+    showDialog(); 
     fetchProducts(); 
 
 
 });
 
+    // show dialog function to check local storage or open dialog 
+    const showDialog = function(){
+          //check whether local storage has info, otherwise open dialog to get data 
+        if (localStorage.getItem('crushName') && localStorage.getItem('crushPlace')){
+        $("h1").fadeIn(2000); 
+        $("#main-img h1").text(`💕 ${localStorage.getItem('crushName')}'s crush is in ${localStorage.getItem("crushPlace")} 💕`); 
+    }
+    else{
+        $("#dialog").dialog("open"); 
+    }
+
+    }
   // update heading with new values and save to web storage 
     const updateHeading = function(){
         let name = $("#userName").val(); 
@@ -52,7 +60,6 @@ $(document).ready(function() {
             .then(products => {
                 const $productsCarousel = $("#products"); 
                 products.forEach(product => {
-                    console.log(product);
                     $productsCarousel.append(
                         `
                         <div>
