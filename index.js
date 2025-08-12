@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    
+    //create dialog jquery widget 
     $("#dialog").dialog({
         modal: true, 
         autoOpen: false, 
@@ -17,12 +17,26 @@ $(document).ready(function() {
             "xoxo" :  function() {
                 updateHeading(); 
                 $(this).dialog("close");
-                $("h1").fadeIn(2000); 
                 }
             }
     })
 
+    //check whether local storage has info, otherwise open dialog to get data 
+    if (localStorage.getItem('crushName') && localStorage.getItem('crushPlace')){
+        $("h1").fadeIn(2000); 
+        $("#main-img h1").text(`${localStorage.getItem('crushName')}'s crush is in ${localStorage.getItem("crushPlace")}`); 
+    }
+    else{
+        $("#dialog").dialog("open"); 
+    }
 
+    
+    fetchProducts(); 
+
+
+});
+
+  // update heading with new values and save to web storage 
     const updateHeading = function(){
         let name = $("#userName").val(); 
         let place = $("#place").val(); 
@@ -32,14 +46,29 @@ $(document).ready(function() {
         }
     }
 
-    if (localStorage.getItem('crushName') && localStorage.getItem('crushPlace')){
-        $("h1").fadeIn(1200); 
-        $("#main-img h1").text(`${localStorage.getItem('crushName')}'s crush is in ${localStorage.getItem("crushPlace")}`); 
+    //fetch data for products from JSON file 
+    const fetchProducts = async function(){
+        fetch("https://de9ff17a-6be2-40ef-a1f4-a643f153fc26.mock.pstmn.io/products").then(data => data.json())
+            .then(products => {
+                const $productsCarousel = $("#products"); 
+                products.forEach(product => {
+                    console.log(product);
+                    $productsCarousel.append(
+                        `
+                        <div>
+                            <img src='${product.image}'> 
+                            <h3> ${product.name} </h3> 
+                            <p> $${product.price} </p>  
+                        </div>
+                        `
+                    )
+                })
+           
+
+        $productsCarousel.slick({
+            slidesToShow: 3, 
+            infinite: true, 
+            arrows: true, 
+        }); 
+         });
     }
-    else{
-        $("#dialog").dialog("open"); 
-    }
-
-
-
-});

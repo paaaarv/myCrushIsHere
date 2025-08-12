@@ -210,7 +210,14 @@ section{
 	width: 80%; 
 	margin: auto; 
 }
+#products{
+    width: 90%; 
+    margin: auto; 
 
+}
+#products img{
+    max-width: 300px; 
+}
 #contact{
 	background-color: var(--white); 
     text-align: center;
