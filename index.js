@@ -62,7 +62,7 @@ $(document).ready(function() {
                 products.forEach(product => {
                     $productsCarousel.append(
                         `
-                        <div>
+                        <div class='product-div'>
                             <img src='${product.image}'> 
                             <h3> ${product.name} </h3> 
                             <p> $${product.price} </p>  
@@ -75,7 +75,9 @@ $(document).ready(function() {
         $productsCarousel.slick({
             slidesToShow: 3, 
             infinite: true, 
-            arrows: true, 
+            autoplay: true,
+            autoplaySpeed: 1000,
+            arrows: false
         }); 
          });
     }
