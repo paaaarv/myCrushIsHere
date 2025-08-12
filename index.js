@@ -27,6 +27,14 @@ $(document).ready(function() {
     })
 
     showDialog(); 
+    $("#contact-button").on("click", function(e){
+        e.preventDefault(); 
+        let name = $("#name").val(); 
+        let email = $("#email").val(); 
+        let message=$("#message").val(); 
+        //eventually would send the email to the admin's email address. 
+
+    })
     fetchProducts(); 
 
 
@@ -71,7 +79,7 @@ $(document).ready(function() {
                     )
                 })
            
-
+        //jquery carousel plugin 
         $productsCarousel.slick({
             slidesToShow: 3, 
             infinite: true, 
