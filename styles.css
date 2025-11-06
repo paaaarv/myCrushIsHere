@@ -86,9 +86,11 @@ h1{
 }
 h2{
 	font-family: "Chewy", system-ui;
-	font-size: 24px;
+	font-size: 3em;
+    text-transform: lowercase;
 	color: var(--red);
-    margin-bottom: 20px; 
+    margin-bottom: 40px;
+    letter-spacing: 1.5px; 
 }
 
 h3{
@@ -98,10 +100,8 @@ h3{
 }
 
 p{
-	font-size: 16px; 
-	margin: 10px;
-	padding: 5px;
-    line-height: 1.5em;
+    line-height: 1.75em;
+    font-family: "Inter", sans-serif;
 }
 li{
     line-height: 1.2em; 
@@ -177,9 +177,27 @@ nav a, footer a{
    height: auto;
 }
 
-
-#about, #shop, #faq{
-	width: 80%; 
+#about{
+    background-color: var(--red); 
+}
+#about h2{
+    width: 32%; 
+    padding: 64px 0; 
+    color: var(--light-pink); 
+    margin: auto;
+}
+#about p{
+    width: 32%; 
+    color: var(--light-pink); 
+    padding-bottom: 64px;
+    font-size: 1.3em;
+    text-align: left; 
+    margin: auto;
+}
+#about strong {
+    font-size: 1.4em; 
+    font-family: "Chewy", system-ui; 
+    text-align: right;
 }
 
 #products img{
