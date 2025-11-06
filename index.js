@@ -31,7 +31,7 @@ const fetchProducts = async function () {
   fetch("https://de9ff17a-6be2-40ef-a1f4-a643f153fc26.mock.pstmn.io/products").then(response => response.json()).then(data => {
     const productDiv = $("#products");
     data.forEach(obj => {
-      productDiv.append(`<div class='product-div'><img class='product-img' src='${obj.image}'>  <h3> ${obj.name} + " </h3> <p> ${obj.price} </p> </div>`);
+      productDiv.append(`<div class='product-div'><img class='product-img' src='${obj.image}'>  <h3> ${obj.name} </h3> <p> $ ${obj.price} </p> </div>`);
     });
     _0x3b2484.slick({
       'slidesToShow': 0x3,

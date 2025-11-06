@@ -86,7 +86,7 @@ h1{
 }
 h2{
 	font-family: "Chewy", system-ui;
-	font-size: 3em;
+	font-size: 3.5em;
     text-transform: lowercase;
 	color: var(--red);
     margin-bottom: 40px;
@@ -94,9 +94,9 @@ h2{
 }
 
 h3{
-    font-size: 20px; 
+    font-size: 1em; 
     font-weight: bold; 
-    margin-bottom: 20px; 
+    margin-bottom: 8px; 
 }
 
 p{
@@ -109,7 +109,7 @@ li{
 }
 
 section{
-    	margin: 64px auto;  
+    	padding: 64px auto;  
 }
 header, footer{
 	background-color: var(--pink); 
@@ -181,28 +181,46 @@ nav a, footer a{
     background-color: var(--red); 
 }
 #about h2{
-    width: 32%; 
+    width: 36%; 
     padding: 64px 0; 
     color: var(--light-pink); 
     margin: auto;
 }
 #about p{
-    width: 32%; 
+    width: 36%; 
     color: var(--light-pink); 
     padding-bottom: 64px;
     font-size: 1.3em;
     text-align: left; 
     margin: auto;
 }
-#about strong {
-    font-size: 1.4em; 
+#about p:last-child {
+    font-size: 3em; 
     font-family: "Chewy", system-ui; 
     text-align: right;
 }
 
+#shop{
+     background-color: var(--white);
+     color: var(--red);
+     font-family: "Inter", sans-serif;
+     font-size: 1.3em;
+     padding: 40px;
+}
+#products{
+    display: flex; 
+    justify-content: space-around;
+    grid-gap: 32px;
+    flex-wrap: wrap; 
+}
+
 #products img{
-    max-width: 300px; 
+    height: 300px; 
+    width: 300px;
+    object-fit: cover;
     margin-bottom: 10px; 
+    border: 1px solid var(--red); 
+    border-radius: 10px;
 }
 #contact{
 	background-color: var(--white); 
