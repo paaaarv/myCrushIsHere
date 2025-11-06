@@ -73,7 +73,7 @@ body{
 
 h1{
     font-family: "Chewy", system-ui;
-    font-size: 4em;
+    font-size: 5em;
     position: absolute;
     top: 40%;
     z-index: 10000;
@@ -221,6 +221,28 @@ nav a, footer a{
     margin-bottom: 10px; 
     border: 1px solid var(--red); 
     border-radius: 10px;
+}
+#categories{
+    padding: 32px;
+    background-color: var(--white);
+}
+#categories-div {
+    display: flex; 
+    justify-content: space-evenly; 
+    flex-wrap: wrap; 
+    padding: 50px;
+}
+button{
+    padding: 25px;
+    width: 20%; 
+    border: none;
+    border-radius: 32px;
+    background-color: var(--pink); 
+    color: var(--white); 
+    font-family: "Inter", sans-serif; 
+    font-size: 1.5em; 
+    text-transform: lowercase;
+    letter-spacing: 1px;
 }
 #contact{
 	background-color: var(--white); 
