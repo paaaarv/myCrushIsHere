@@ -21,49 +21,12 @@ lscroll.update();
 
 
 $(document).ready(function () {
-  $("#dialog").dialog({
-    'modal': true,
-    'autoOpen': false,
-    'width': 0x258,
-    'height': 0x1c2,
-    'show': {
-      'effect': 'fade',
-      'duration': 0x4b0
-    },
-    'hide': {
-      'effect': "fade",
-      'duration': 0x190
-    },
-    'buttons': {
-      'xoxo': function () {
-        updateHeading();
-        $(this).dialog("close");
-        showDialog();
-      }
-    }
-  });
-  showDialog();
   $("#contact-button").on("click", function (_0x5b861b) {
     _0x5b861b.preventDefault();
   });
   fetchProducts();
 });
-const showDialog = function () {
-  if (localStorage.getItem('crushName') && localStorage.getItem("crushPlace")) {
-    $('h1').fadeIn(0x7d0);
-    $("#main-img h1").text("💕 " + localStorage.getItem("crushName") + "'s crush is in " + localStorage.getItem('crushPlace') + " 💕");
-  } else {
-    $("#dialog").dialog("open");
-  }
-};
-const updateHeading = function () {
-  let _0x37f949 = $("#userName").val();
-  let _0xd44ced = $("#place").val();
-  if (_0x37f949 && _0xd44ced) {
-    localStorage.setItem("crushName", _0x37f949);
-    localStorage.setItem("crushPlace", _0xd44ced);
-  }
-};
+
 const fetchProducts = async function () {
   fetch("https://de9ff17a-6be2-40ef-a1f4-a643f153fc26.mock.pstmn.io/products").then(response => response.json()).then(data => {
     const productDiv = $("#products");
