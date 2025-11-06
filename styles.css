@@ -1,7 +1,6 @@
 /* IMPORTED FONTS */ 
 
-@import url('https://fonts.googleapis.com/css2?family=Delius&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 /* CSS RESET */ 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -68,28 +67,25 @@ body{
 	max-width: 1280px;
 	margin: auto; 
 	background-color: var(--light-pink); 
-	color: var(--black); 
-	font-family: "Delius", sans-serif; 
-    border-radius: 20px; 
-    border: 8px solid var(--red); 
+	color: var(--white); 
+	font-family: "Inter", sans-serif; 
 }
 
 h1{
-    font-size: 2.5em;
-    display: none;
+    font-family: "Chewy", system-ui;
+    font-size: 4em;
     position: absolute;
-    top: 200px;
-    left: 15%; 
-    z-index: 1000;
-    color: var(--white);
-    background-color: rgb(0,0,0, 0.6);
-    padding: 100px 0;
+    top: 40%;
+    z-index: 10000;
+    color: var(--light-pink);
     text-align: center;
+    background: transparent;
     box-sizing: border-box;
-    width: 70%;
+    width: 100%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 h2{
-	font-family: "Roboto", sans-serif;
+	font-family: "Chewy", system-ui;
 	font-size: 24px;
 	color: var(--red);
     margin-bottom: 20px; 
@@ -122,7 +118,6 @@ header, footer{
     justify-content: space-between;
     align-content: center;
     padding: 10px;
-    border-radius: 10px; 
 }
 #logo {
     width: 200px; 
@@ -150,73 +145,36 @@ nav ul{
 nav a, footer a{
 	text-decoration: none; 
 	color: var(--white); 
-	font-family: "Delius", sans-serif; 
+	font-family: "Inter", sans-serif; 
+    font-size: 20px;
+    text-transform: lowercase;
+
 }
 #cart{
     align-content: center;
     margin-right: 16px;
 }
-#dialog{
-    display:none;
-    background-color: var(--white); 
-    color: var(--red); 
-    border: 4px solid var(--light-pink); 
-    border-radius: 10px; 
 
-}
-
-/* jQuery UI overriding custom styling for dialog */ 
-
-.ui-dialog {
-  border-radius: 15px;
-  padding: 0;
-  background: var(--white); 
-}
-
-
-.ui-dialog-titlebar {
-  background: transparent;
-  border: none;
-  font-weight: bold;
-  font-size: 1.3em;
-  padding: 12px 20px;
-  text-align: center;
-}
-
-.ui-widget-content{
-    border:none !important; 
-}
-.ui-dialog-buttonset button, #contact-button{
-  background-color: var(--pink); 
-  border: none;
-  color: var(--white); 
-  font-weight: bold;
-  padding: 8px 20px;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin: 0 10px;
-}
-
-
-button:hover {
-  background-color: var(--red);
-  box-shadow: 0 6px 12px rgba(236, 64, 122, 0.7);
-}
-
-
-.ui-widget-overlay {
-  background: rgba(222, 218, 219, 0.576); 
-}
 
 #main-img{
-    object-fit: cover;
+    object-fit: contain;
     position: relative; 
-    overflow: hidden;  
+    overflow: hidden; 
+    max-height: 60vh;  
+}
+#main-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60vh;
+  background-color: rgba(232, 163, 172, 0.4); 
+  z-index: 1; 
 }
 #main-img img {
-   width: 100%;
-   height: 100vh;
+   max-width: 100%;
+   height: auto;
 }
 
 
@@ -244,7 +202,7 @@ button:hover {
 }
 
 label{
-	font-family: "Delius", sans-serif;
+	font-family: "Inter", sans-serif;
 	margin: 5px;
 	color: var(--red); 
     width: 20%; 
@@ -263,7 +221,7 @@ input, textarea{
     width: 25%; 
     padding: 10px;
     font-size: 16px; 
-    font-family: "Delius", sans-serif;
+    font-family: "Chewy", system-ui;
     font-weight: bold;
     margin: 10px 96px 10px auto; 
 }
