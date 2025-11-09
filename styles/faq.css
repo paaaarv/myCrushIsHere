@@ -1,0 +1,46 @@
+
+main{
+    width: 90%; 
+    margin: auto; 
+}
+
+section{
+   margin-top: 32px;
+}
+
+h2{
+    text-align: center; 
+    text-transform: uppercase;
+}
+h3{
+    color: var(--red); 
+    font-size: 24px; 
+    margin: 4px;
+    display: inline-block;
+}
+
+
+p{
+    color: var(--pink); 
+    font-size: 14px;
+    margin: 4px;
+    width: 100%; 
+    max-width: 650px;
+}
+.faq-div{
+    padding-bottom: 20px; 
+    width: 70%; 
+    margin: auto;
+}
+
+strong{
+    font-weight: bold; 
+    color: var(--red); 
+    
+
+}
+
+@media screen and (min-width: 900px){
+
+
+}
