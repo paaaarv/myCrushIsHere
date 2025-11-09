@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles.css"> 
+    <link rel="stylesheet" href="./styles/contact.css">
     <title> My Crush is Here </title> 
 </head>
 <body>
@@ -18,7 +19,7 @@
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#shop">Shop</a></li>
-                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="#">Contact</a></li>
                 <li><a href="/faq.html">FAQ</a></li>
             </ul>
         </nav>
@@ -27,31 +28,31 @@
         </div> 
     </header>
     <main>
-        <div id="main-img"> 
-             <h1> My Crush Is Here </h1> 
-            <img src="./images/main_img.jpeg" alt="red,pink, and white crocheted heart coasters overlapping eachother and a disco ball at the top right"> 
-        </div> 
-        <section id="shop">
-            <h2> Shop Our Favorites </h2> 
-            <div id="products">
-
-            </div>
-        </section>
-        <section id="categories">
-            <h2> Categories </h2> 
-            <div id="categories-div"> 
-                <button> Crochet Cuties </button>
-                <button> Art Prints </button> 
-                <button> Greeting Cards </button> 
-                <button> Stickers </button> 
-            </div>
-        </section>
-        <section id="about">
-            <h2> About </h2> 
-            <p> Inspired by the flirty and exhilarating feelings of having a new crush, our aim is to add lighthearted moments to your daily life through accessories and art. <br><br>
-            All items are designed, block printed, and hand-crocheted by Brooklyn-based artist and designer Sara Wakefield. </p>
-            
-            <p> <strong> xoxo </strong> </p> 
+        <section id="contact">
+            <h2> Contact Us</h2>
+                <form id="contact-form">
+                    <div class="form-group row">
+                        <label for="userName" class="col-sm-2 col-form-label"> Name: </label>
+                        <div class="col-sm-10">
+                            <input class="form-control" type="text" name="userName" id="name" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="userEmail" class="col-sm-2 col-form-label">Email: </label>
+                        <div class="col-sm-10">
+                        <input class="form-control" type="email" name="userEmail" id="userEmail" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="userMessage" class="col-sm-2 col-form-label">Message: </label>
+                        <div class="col-sm-10">
+                        <textarea class="form-control" id="userMessage" rows="4"></textarea>
+                        </div>
+                    </div>
+                        <button type="submit" id="contact-button" class="btn btn-primary mb-2">submit</button>
+                    </div> 
+                </form>  
+                <form>
         </section>
     </main>
     <footer>
